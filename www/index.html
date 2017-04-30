@@ -1,0 +1,52 @@
+<!-- ┏┓　　　┏┓
+┏┛┻━━━┛┻┓
+┃　　　　　　　┃
+┃　　　━　　　┃
+┃　┳┛　┗┳　┃
+┃　　　　　　　┃
+┃　　　┻　　　┃
+┃　　　　　　　┃
+┗━┓　　　┏━┛
+　　┃　　　┃
+　　┃　　　┃
+　　┃　　　┗━━━┓
+　　┃　　　　　　　┣┓
+　　┃　　　　　　　┏┛
+　　┗┓┓┏━┳┓┏┛
+　　　┃┫┫　┃┫┫
+　　　┗┻┛　┗┻┛ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>一对一匿名私聊 WEB 客户端</title>
+    <link rel="stylesheet" type="text/css" href="src/css/base.css">
+    <link rel="stylesheet" type="text/css" href="src/css/smalltalk.min.css">
+</head>
+<body>
+    <div id="app" class="app">
+        <div id="side" class="side">
+            <div class="main"> <img src="src/img/head.jpg"> <span id="btn-session" class="active">				<svg t="1481263967849" class="sicon " style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5869" xmlns:xlink="http://www.w3.org/1999/xlink">				<path d="M511.186472 866.536712c-32.603559 0-63.565734-1.656733-94.55247-8.219195l-122.253368 82.06711c-3.238764 1.656733-8.147564 3.28072-13.038968 3.28072-13.048177 0-24.450878-9.843182-24.450878-26.251897V795.937794c-115.735931-72.190159-192.349843-190.385095-192.349843-323.313593 0-216.654388 200.512756-392.289548 448.27463-392.289548 247.783363 0 448.2777 175.636183 446.6312 393.913535 0.001023 216.652342-200.494337 392.288524-448.260303 392.288524z m0-718.897164c-211.900108 0-383.070582 146.068773-383.070583 326.610686 0 105.054661 60.306504 205.152427 161.374365 265.908163l16.310477 9.843182c9.778714 4.906753 16.299221 16.408715 16.299221 27.907607v64.004732l58.682517-39.409568 11.397585-8.18645c8.157797-4.939499 16.306384-6.563486 24.454971-4.939499l13.052271 3.282767c27.695782 4.938476 55.417147 8.219195 83.129302 8.219195 210.293517 0 383.070582-147.727553 381.418966-326.629105 0-180.542936-171.129542-326.611709-383.049092-326.61171z m202.110137 390.629745c-29.693276 0-53.79316-24.24724-53.79316-54.177923 0-29.877471 24.099884-54.140061 53.79316-54.140061 29.722952 0 53.821813 24.26259 53.821813 54.140061 0 29.930683-24.097838 54.177923-53.821813 54.177923z m-197.22385 0c-29.705556 0-53.78702-24.24724-53.787021-54.177923 0-29.877471 24.081465-54.140061 53.787021-54.140061 29.711695 0 53.80544 24.26259 53.80544 54.140061 0 29.930683-24.093744 54.177923-53.80544 54.177923z m-203.751521 0c-29.724998 0-53.804417-24.24724-53.804416-54.177923 0-29.877471 24.079418-54.140061 53.804416-54.140061 29.707602 0 53.78702 24.26259 53.787021 54.140061 0 29.930683-24.079418 54.177923-53.787021 54.177923z" p-id="5870" fill="#1296db"></path></svg>			</span>                </div>
+        </div>
+        <div id="linkman" class="linkman">
+            <div class="main">
+                <div class="header"> <input type="search" name=""> <i id="btn-add">+</i> </div>
+                <div class="body">
+                    <ul id="session"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="chat"> </div>
+    </div>
+    <audio id="ding" src="src/res/ding.mp3">不支持 audio 标签</audio>
+    <div id="emoji" class="shadow move"><span>😂</span><span>😀</span><span>😭</span><span>😹</span><span>🙏</span><span>😬</span><span>😁</span><span>😃</span><span>😄</span><span>😅</span><span>😆</span><span>😇</span><span>😉</span><span>😊</span><span>🙂</span><span>🙃</span><span>😋</span><span>😌</span><span>😍</span><span>😘</span><span>😗</span><span>😙</span><span>😚</span><span>😜</span><span>😝</span><span>😛</span><span>🤑</span><span>🤓</span><span>😎</span><span>🤗</span><span>😏</span><span>😶</span><span>😐</span><span>😑</span><span>😒</span><span>🙄</span><span>🤔</span><span>😳</span><span>😞</span><span>😟</span><span>😠</span><span>😡</span><span>😔</span><span>😕</span><span>🙁</span><span>😣</span><span>😖</span><span>😫</span><span>😩</span><span>😤</span><span>😮</span><span>😨</span><span>😰</span><span>😯</span><span>😦</span><span>😧</span><span>😢</span><span>😥</span><span>😪</span><span>😵</span><span>😲</span><span>🤐</span><span>😷</span><span>🤒</span><span>🤕</span><span>😴</span><span>💤</span><span>🙌</span><span>👏</span><span>👋</span><span>👊</span><span>👌</span><span>💪</span><span>👍</span><span>👆</span><span>👇</span><span>👈</span><span>👉</span><span>🖕</span><span>🤘</span><span>🖖</span><span>💩</span><span>😈</span><span>👿</span><span>👹</span><span>👺</span><span>💀</span><span>👻</span><span>👽</span><span>🤖</span><span>😺</span><span>😸</span><span>😻</span><span>😼</span><span>😽</span><span>🙀</span><span>😿</span><span>😾</span><span>💅</span><span>👄</span><span>👅</span><span>👂</span><span>👃</span><span>👁</span><span>👀</span><span>👤</span><span>🗣</span><span>👶</span><span>👦</span><span>👧</span><span>👨</span><span>👩</span><span>👱</span><span>👴</span><span>👵</span><span>👲</span><span>👳</span><span>👮</span><span>👷</span><span>💂</span></div>
+    <div class="outline"><img src="src/img/loading.gif"></div>
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/socket.io.min.js"></script>
+    <script src="src/js/md5.js"></script>
+    <script src="src/lib/smalltalk/smalltalk.min.js"></script>
+    <script src="src/js/im.js"></script>
+</body>
+
+</html>

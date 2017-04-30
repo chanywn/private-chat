@@ -1,0 +1,19 @@
+{
+  "name": "onecallone",
+  "version": "1.0.0",
+  "description": "base socket.io one call one chat application",
+  "main": "server.js",
+  "dependencies": {
+    "socket.io": "^1.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "lemo",
+  "license": "ISC",
+  "keywords": [
+    "socket.io"
+  ]
+}
