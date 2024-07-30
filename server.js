@@ -12,6 +12,11 @@ var defaultPage = ['index.html','default.html','index.htm','default.htm'];
 var fsroot = path.join(path.resolve(process.argv[2] || '.'),'/www');
 
 const server = http.createServer((request, response) => {
+    if (path.normalize(decodeURI(request.url)) !== decodeURI(request.url)) {
+        response.statusCode = 403;
+        response.end();
+        return;
+    }
 	//获得URL的path
     var pathname = url.parse(request.url).pathname;
 
